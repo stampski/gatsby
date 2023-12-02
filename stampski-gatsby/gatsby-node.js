@@ -20,7 +20,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  const postTemplate = path.resolve(`./src/templates/post.js`)
+  const postTemplate = path.resolve(`./src/components/layout.js`)
 
   allPosts.forEach(post => {
     createPage({

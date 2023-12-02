@@ -16,12 +16,17 @@ const Layout = ({ pageTitle, children }) => {
           title
         }
       }
+      wpPost {
+        title,
+        id,
+        content
+      }
     }
   `)
 
   return (
     <div className={container}>
-      <header>{data.site.siteMetadata.title}</header>
+      <header>{data.site.siteMetadata.title} | {data.wpPost.title}</header>
       <nav>
         <ul className={navLinks}>
           <li className={navLinkItem}>
@@ -37,8 +42,9 @@ const Layout = ({ pageTitle, children }) => {
         </ul>
       </nav>
       <main>
-        <h1 className={heading}>{pageTitle}</h1>
+        <h1 className={heading}>{data.wpPost.title}</h1>
         {children}
+        {data.wpPost.content}
       </main>
     </div>
   )
