@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "gatsby-source-filesystem": "^5.12.1"
+  }
+}
